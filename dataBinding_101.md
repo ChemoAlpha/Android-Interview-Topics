@@ -14,35 +14,6 @@ Data Binding is a feature in Android that allows you to bind UI components in yo
 - Use `data` tag to define variables that you want to bind.
 - Use `@{}` syntax to bind data to views.
 
-**Example:**
-Suppose you have a `User` class with `name` and `email` properties. Here's how you can use Data Binding to bind this data to a TextView in your layout:
-
-```xml
-<!-- layout.xml -->
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <data>
-        <variable
-            name="user"
-            type="com.example.User" />
-    </data>
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@{user.name}"
-        android:textSize="18sp"
-        android:textColor="#333333"
-        android:padding="8dp" />
-</layout>
-
-// MainActivity.kt
-val binding: LayoutBinding = DataBindingUtil.setContentView(this, R.layout.layout)
-binding.user = User("John Doe", "john@example.com")
-
-
-
-
-
 # Data Binding Interview Questions
 
 **1. What is Data Binding in Android?**
